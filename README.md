@@ -4,11 +4,19 @@ Relay is a full-stack 1-on-1 messaging application designed for simple team comm
 
 ## Live Demo
 
-> Add the production URL after the independent deployment is finalized.
+[Relay Messaging Team](https://relay-messaging-team-production.up.railway.app)
 
 ## Screenshots
 
-> Add screenshots of the login, chat, and light/dark mode interfaces here.
+### Login
+
+![Relay Login Light](public/screenshots/sign-in-light.png)
+
+![Relay Login Dark](public/screenshots/sign-in-dark.png)
+
+![Relay Register Light](public/screenshots/sign-up-light.png)
+
+![Relay Register Dark](public/screenshots/sign-up-dark.png)
 
 ## Features
 
@@ -212,25 +220,25 @@ The application exposes server-side API routes through the Next.js App Router.
 
 ### Authentication
 
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/api/auth/register` | Register a new user |
-| POST | `/api/auth/login` | Authenticate a user |
-| POST | `/api/auth/logout` | Clear the authentication cookie |
-| GET | `/api/auth/me` | Retrieve the authenticated user's session information |
+| Method | Endpoint             | Purpose                                               |
+| ------ | -------------------- | ----------------------------------------------------- |
+| POST   | `/api/auth/register` | Register a new user                                   |
+| POST   | `/api/auth/login`    | Authenticate a user                                   |
+| POST   | `/api/auth/logout`   | Clear the authentication cookie                       |
+| GET    | `/api/auth/me`       | Retrieve the authenticated user's session information |
 
 ### Conversations & Messages
 
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET / POST | `/api/conversations` | Retrieve or create conversations |
+| Method     | Endpoint                                       | Purpose                                         |
+| ---------- | ---------------------------------------------- | ----------------------------------------------- |
+| GET / POST | `/api/conversations`                           | Retrieve or create conversations                |
 | GET / POST | `/api/conversations/[conversationId]/messages` | Retrieve or send messages within a conversation |
 
 ### Users
 
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/api/users` | Retrieve users available for starting a conversation |
+| Method | Endpoint     | Purpose                                              |
+| ------ | ------------ | ---------------------------------------------------- |
+| GET    | `/api/users` | Retrieve users available for starting a conversation |
 
 All protected operations perform authentication and authorization on the server.
 
@@ -355,10 +363,10 @@ npx prisma db seed
 
 The development seed creates two demo users:
 
-| Name | Email | Password |
-|---|---|---|
+| Name  | Email               | Password      |
+| ----- | ------------------- | ------------- |
 | Alice | `alice@example.com` | `password123` |
-| Bob | `bob@example.com` | `password123` |
+| Bob   | `bob@example.com`   | `password123` |
 
 These credentials are intended for local/demo development only.
 
@@ -396,13 +404,13 @@ npx prisma db seed
 
 Relay requires the following environment variables:
 
-| Variable | Purpose |
-|---|---|
-| `POSTGRES_USER` | PostgreSQL username used by Docker Compose |
+| Variable            | Purpose                                    |
+| ------------------- | ------------------------------------------ |
+| `POSTGRES_USER`     | PostgreSQL username used by Docker Compose |
 | `POSTGRES_PASSWORD` | PostgreSQL password used by Docker Compose |
-| `POSTGRES_DB` | PostgreSQL database name |
-| `DATABASE_URL` | Prisma database connection string |
-| `JWT_SECRET` | Secret used to sign authentication tokens |
+| `POSTGRES_DB`       | PostgreSQL database name                   |
+| `DATABASE_URL`      | Prisma database connection string          |
+| `JWT_SECRET`        | Secret used to sign authentication tokens  |
 
 Production secrets should be configured through the hosting provider's environment variable system and must not be committed to Git or exposed to client-side code.
 
