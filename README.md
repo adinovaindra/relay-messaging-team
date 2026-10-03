@@ -14,6 +14,8 @@ Relay is a full-stack 1-on-1 messaging application designed for simple team comm
 
 ![Relay Login Dark](public/screenshots/sign-in-dark.png)
 
+### Register
+
 ![Relay Register Light](public/screenshots/sign-up-light.png)
 
 ![Relay Register Dark](public/screenshots/sign-up-dark.png)
