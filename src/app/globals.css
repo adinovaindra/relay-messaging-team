@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --surface: #ffffff;
+  --surface-muted: #f5f5f5;
+  --border: #e5e5e5;
+  --muted-foreground: #6b6b6b;
+  --brand: #000000;
+  --brand-foreground: #ffffff;
+  --font-sans: var(--font-nunito);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --surface: #141414;
+  --surface-muted: #1f1f1f;
+  --border: #303030;
+  --muted-foreground: #a3a3a3;
+  --brand: #ffffff;
+  --brand-foreground: #000000;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --font-sans: var(--font-nunito);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  min-height: 100%;
+  background: var(--background);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-nunito), sans-serif;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button:not(:disabled),
+[role="button"],
+a {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

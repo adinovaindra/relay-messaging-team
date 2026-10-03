@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" role="img" aria-label="Relay logo">
+  <rect width="520" height="150" fill="none"/>
+  <g transform="translate(12 12) scale(1.0)">
+    <g stroke="#2563EB" fill="none" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 48 H92 L70 28"/>
+      <path d="M92 48 L70 68"/>
+      <path d="M24 92 H58 L92 124"/>
+      <path d="M24 92 L48 116"/>
+    </g>
+  </g>
+  <text x="142" y="101" font-family="Nunito, Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="2" fill="#111827">RELAY</text>
+</svg>
